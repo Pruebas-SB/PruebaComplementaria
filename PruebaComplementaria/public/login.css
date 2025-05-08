@@ -1,0 +1,1061 @@
+.ultimoo{
+  margin-top: 1rem;
+}
+
+.btn-iniciar1:hover {
+  background-color: rgb(93, 83, 35);
+}
+
+/* Estilos para el contenedor principal del login */
+.Primero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    justify-content: flex-start;
+    padding-top: 60px; /* Espacio en la parte superior */
+}
+
+/* Estilos del título principal */
+.Titulo {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1rem;
+}
+
+
+/* Estilos del logo */
+.Logo {
+    width: 100px;
+    height: auto;
+    margin-top: -20px;
+}
+
+/* Subtítulo de inicio de sesión */
+.titulo_sesion {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+/* Estilos del formulario */
+.Formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 300px;
+}
+
+/* Estilos del botón para activar el modo oscuro */
+.BotonModoOscuro {
+    background-color: transparent; /* Hace el fondo transparente */
+    border: none; /* Quita el borde */
+    font-size: 30px; /* Aumenta el tamaño del icono */
+    padding: 15px 30px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: -8rem;
+    margin-left: 20rem;
+}
+
+/* Estilos de las etiquetas del formulario */
+.Formulario label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilos de los campos de entrada del formulario */
+.Formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilos del botón de iniciar sesión */
+.Formulario .btn-iniciar {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(161, 147, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Cambia el color del botón cuando el usuario pasa el mouse */
+.Formulario .btn-iniciar:hover {
+    background-color: rgb(93, 83, 35);
+}
+
+
+
+/* =======================
+   MEDIA QUERIES
+========================== */
+
+/* Media query para pantallas medianas (820px a 1200px) */
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+    .Formulario {
+        width: 350px;  
+        margin-top: 20px;
+    }
+
+    .Titulo {
+        font-size: 2.5em; 
+        margin-top: 1rem; 
+    }
+    .titulo_sesion{
+        margin-top: -0.1rem; 
+
+    }
+    .Logo {
+        width: 120px;  
+    }
+    
+}
+
+/* Media query para pantallas grandes (más de 1200px) */
+@media screen and (min-width: 1200px) {
+    .Formulario {
+        width: 800px;  
+        padding: 1px;  
+        margin-top: -30px;
+    }
+
+    .Titulo {
+        font-size: 3em; 
+        margin-top: -1rem;
+        
+        
+    }
+
+    .Logo {
+        width: 180px;  
+        height: auto;
+        padding: 30px;  
+        margin-top: -50px;
+    }
+    
+    .titulo_sesion {
+        font-size: 2.5em;  
+        padding: 50px;  
+        margin-top: -40px;
+    }
+    
+    .Formulario .btn-iniciar {
+        font-size: 2em;  
+        padding: 15px;  
+    }
+    
+
+    .Formulario input {
+        font-size: 1.5em;  
+        padding: 12px;  
+    }
+
+    .Formulario label {
+        font-size: 1.5em;  
+    }
+
+    
+    
+}
+
+/* Media query para pantallas muy grandes (4K) */
+@media screen and (min-width: 2560px) and (min-height: 1537px) {
+    .Formulario {
+        width: 100rem;  
+    }
+    
+    .Titulo {
+        font-size: 6em; 
+    }
+
+    .Logo {
+        width: 300px;  
+        padding: 40px;  
+        margin-top: 10px;
+    }
+
+    .titulo_sesion {
+        font-size: 4em;  
+        padding: 60px;  
+    }
+
+    .Formulario .btn-iniciar {
+        font-size: 2.5em;  
+        padding: 20px;  
+    }
+    
+
+    .Formulario input {
+        font-size: 2em;  
+        padding: 15px;  
+    }
+
+    .Formulario label {
+        font-size: 2em;  
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  body {
+    font-family: sans-serif;
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .movie-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .movie-title {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff; /* Fondo blanco para el título */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .movie-grid {
+      grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+  }
+  
+  /* Estilos generales */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+  
+  /* Logo y eslogan */
+  .TYS {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .eslogan {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: relative;
+  }
+  
+  /* Menú de navegación en escritorio */
+  nav {
+    display: block;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px 0;
+    position: relative; /* Necesario para asegurar que el rectángulo se posicione respecto al enlace */
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%; /* El rectángulo cubrirá todo el ancho del texto */
+    height: 5px; /* Alto del rectángulo */
+    background-color: black; /* Color del rectángulo */
+    top: 0; /* Coloca el rectángulo en la parte superior del enlace */
+    left: 0;
+    transform: scaleX(0); /* Inicia invisible */
+    transform-origin: top right; /* Para que la animación sea de derecha a izquierda */
+    transition: transform 0.3s ease; /* Animación de aparición */
+  }
+  nav ul li:hover a::after {
+    transform: scaleX(1); /* El rectángulo se hace visible */
+    transform-origin: top left; /* Animación de izquierda a derecha */
+  }
+  /* Checkbox para controlar el menú */
+  .menu-btn {
+    display: none;
+  }
+  
+  /* Ícono de menú (hamburguesa) */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  .cy {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* tus estilos actuales */
+  }
+  
+  .btn-reservar {
+    padding: 6px 12px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: rgb(101, 167, 189);
+    margin-bottom: 20px;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #0056b3;
+  }
+  
+  /*Nuevas medaiqueries*/
+  /* Móviles */
+  @media screen and (max-width: 767px){
+    .btn-iniciar1{
+      margin-top: -28rem;
+      margin-left: 2rem;
+      width: 40%;
+      background-color: rgb(161, 147, 72);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6em;
+      cursor: pointer;
+    }
+    
+    
+    
+    .titulo_sesion{
+        margin-top: -0.1rem;
+    
+    }
+    .Formulario {
+        margin-top: 20px;
+    }
+    
+    .encabezado {
+      flex-direction: column;
+      align-items: flex-start;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0; 
+    }
+  
+    .menu-icon {
+      position: absolute;
+      right: -0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      cursor: pointer;
+      margin: 0;
+      margin-top: -2.5rem;
+    }
+  
+    .TYS {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo {
+      width: fit-content;
+      height: fit-content;
+    }
+    .eslogan {
+      display: inline-block;
+      width: fit-content;
+    }
+  
+    /* Ajuste del nav desplegable */
+    nav {
+      display: none;
+      width: 60%;
+      background-color: #e9e9e9;
+      position: absolute;
+      top: calc(100% + 0.5rem); /* justo debajo del header */
+      right: -1.2rem;              /* alineado con el icono */
+      left: auto;               /* anula cualquier left previo */
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 6px;
+    }
+    nav.active {
+      display: block;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 0;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #444;
+    }
+    /*Cuerpo*/
+    .Cuerpo {
+      border: 2px solid rgb(0, 0, 88);
+      background-color: rgb(0, 2, 17);
+      margin-top: 5px;
+      color: white;
+      padding-bottom: 10px;
+    }
+    .Letras{
+      display: inline-block;
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 10px;
+    }
+  
+  
+    .titulodos{
+      display: inline-block;
+      font-size: 40px;
+    }
+   
+    .titulodos,
+  .encabezadodoss,
+  .encabezadotres {
+    display: block;
+    font-weight: bold;
+    font-weight: bold;
+  
+  
+  } 
+  .FondoCuerpo {
+    margin: 10px auto;
+    width: 15rem;
+    display: block;
+  }
+  
+    /*Fin de cuerpo*/
+    /*entradas*/
+    .tituloentradas{
+      font-size: 30px;
+      margin-top: 10px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    
+    /*boton para comunicarse */
+    .botonWhats {
+    position: fixed;
+    bottom: 50px; /* O el valor que prefieras */
+    right: 10px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 9999;    /* Asegura que esté encima de otros elementos */
+    }
+    
+    
+    
+    
+    
+    /*fin del boton*/
+    
+    /*parte final de la pagina*/
+    .ultimoo{
+      
+      background-color: black;
+      padding-top: 1px;
+      padding-bottom: 10px;
+      
+    }
+    .logoDerecho{
+      color: white;
+      margin-top: 10px;
+      margin-left: 20px;
+      width: fit-content;
+  
+    }
+    .derechos{
+      display: none;
+    }
+    .titulo2{
+      color: white;
+      width: fit-content;
+      margin-left: 60px;
+      margin-top: -18px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .tituloUbicacion{
+      font-size: 30px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      margin-top: 1rem;
+  
+    }
+    .descripcionUbicacion{
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      padding-bottom: 10px;
+  
+    }
+  }
+  
+  /* Tablets y pantallas pequeñas */
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    .btn-iniciar1{
+      margin-top: -20rem;
+      margin-left: 2rem;
+      width: 30%;
+      background-color: rgb(161, 147, 72);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6em;
+      cursor: pointer;
+    }
+    .encabezado {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem; 
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+    .navbar{
+      margin-right: 1rem;
+      margin-top: 2rem;
+    }
+    
+  
+    /*Inicio de cuerpo*/
+    /* Estilos del cuerpo */
+    .Cuerpo {
+      border: 2px solid rgb(0, 0, 88);
+      background-color: rgb(0, 2, 17);
+      margin-top: 5px;
+      color: white;
+      padding-bottom: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10rem; 
+      top: 0;
+    }
+    .Letras{
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 5rem;
+    }
+  
+  
+    .titulodos{
+      display: inline-block;
+      font-size: 40px;
+    }
+   
+    .titulodos,
+  .encabezadodoss,
+  .encabezadotres {
+    display: block;
+    font-weight: bold;
+    font-weight: bold;
+  
+  
+  } 
+  .FondoCuerpo {
+    margin: 10px auto;
+    width: 15rem;
+    display: block;
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
+    /*Fin de cuerpo*/
+  
+    /*entradas*/
+    .tituloentradas {
+      margin: 20px auto 0 auto; /* centrado horizontal con espacio arriba */
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      width: fit-content;
+    }
+  
+    
+  
+    
+    /*boton para comunicarse */
+    .botonWhats {
+    position: fixed;
+    bottom: 50px; /* O el valor que prefieras */
+    right: 10px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 9999;    /* Asegura que esté encima de otros elementos */
+    }
+    /*fin del boton*/
+    
+    /*parte final de la pagina*/
+    .ultimoo{
+      background-color: black;
+      padding-top: 1px;
+      padding-bottom: 10px;
+      
+    }
+    .logoDerecho{
+      color: white;
+      margin-top: 10px;
+      margin-left: 3rem;
+      width: fit-content;
+  
+    }
+    .derechos{
+      color: white;
+      margin-left: 5rem;
+      margin-top: -18px;
+    }
+    .titulo2{
+      color: white;
+      width: fit-content;
+      margin-top: -18px;
+      margin-left: 25rem;  
+    }
+    a {
+      text-decoration: none;
+    }
+    
+    .tituloUbicacion{
+      font-size: 30px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      margin-top: 1rem;
+  
+    }
+    .descripcionUbicacion{
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      padding-bottom: 10px;
+  
+    }
+  } 
+  
+  /* Pantallas medianas / laptops */
+  @media screen and (min-width: 1025px) and (max-width: 1558px){
+    .btn-iniciar1{
+      margin-top: -17rem;
+      margin-left: 2rem;
+      width: 20%;
+      background-color: rgb(161, 147, 72);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6em;
+      cursor: pointer;
+    }
+    .encabezado {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem; 
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+    .navbar{
+      margin-right: 1rem;
+      margin-top: 2rem;
+    }
+    
+  
+    /*Inicio de cuerpo*/
+    /* Estilos del cuerpo */
+    .Cuerpo {
+      border: 2px solid rgb(0, 0, 88);
+      background-color: rgb(0, 2, 17);
+      margin-top: 5px;
+      color: white;
+      padding-bottom: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10rem; 
+      top: 0;
+    }
+    .Letras{
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 5rem;
+    }
+  
+  
+    .titulodos{
+      display: inline-block;
+      font-size: 40px;
+    }
+   
+    .titulodos,
+  .encabezadodoss,
+  .encabezadotres {
+    display: block;
+    font-weight: bold;
+    font-weight: bold;
+  
+  
+  } 
+  .FondoCuerpo {
+    margin: 10px auto;
+    width: 15rem;
+    display: block;
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
+    
+    /*Fin de cuerpo*/
+  
+    /*entradas*/
+    .tituloentradas {
+      margin: 20px auto 0 auto; /* centrado horizontal con espacio arriba */
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      width: fit-content;
+    }
+  
+    
+    
+    
+    /*boton para comunicarse */
+    .botonWhats {
+    position: fixed;
+    bottom: 50px; /* O el valor que prefieras */
+    right: 10px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 9999;    /* Asegura que esté encima de otros elementos */
+    }
+    /*fin del boton*/
+    
+    /*parte final de la pagina*/
+    .ultimoo{
+      
+      background-color: black;
+      padding-top: 1px;
+      padding-bottom: 10px;
+      
+    }
+    .logoDerecho{
+      color: white;
+      margin-top: 10px;
+      margin-left: 3rem;
+      width: fit-content;
+  
+    }
+    .derechos{
+      color: white;
+      margin-left: 5rem;
+      margin-top: -18px;
+    }
+    .titulo2{
+      color: white;
+      width: fit-content;
+      margin-left: 45rem;
+      margin-top: -18px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .tituloUbicacion{
+      font-size: 30px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      margin-top: 1rem;
+  
+    }
+    .descripcionUbicacion{
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      padding-bottom: 10px;
+  
+    }
+  }  
+  /* Pantallas grandes */
+  @media screen and (min-width: 1559px){
+    .btn-iniciar1{
+      margin-top: -26rem;
+      margin-left: 2rem;
+      width: 20%;
+      background-color: rgb(161, 147, 72);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6em;
+      cursor: pointer;
+    }
+    .tituloUbicacion{
+      font-size: 30px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      margin-top: 1rem;
+  
+    }
+    .descripcionUbicacion{
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      padding-bottom: 10px;
+  
+    }
+    .encabezado {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem; 
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+    .navbar{
+      margin-right: 1rem;
+      margin-top: 2rem;
+    }
+    
+  
+    /*Inicio de cuerpo*/
+    /* Estilos del cuerpo */
+    .Cuerpo {
+      border: 2px solid rgb(0, 0, 88);
+      background-color: rgb(0, 2, 17);
+      margin-top: 5px;
+      color: white;
+      padding-bottom: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10rem; 
+      top: 0;
+    }
+    .Letras{
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 5rem;
+    }
+  
+  
+    .titulodos{
+      display: inline-block;
+      font-size: 40px;
+    }
+   
+    .titulodos,
+  .encabezadodoss,
+  .encabezadotres {
+    display: block;
+    font-weight: bold;
+    font-weight: bold;
+  
+  
+  } 
+  .FondoCuerpo {
+    margin: 10px auto;
+    width: 15rem;
+    display: block;
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
+    
+    /*Fin de cuerpo*/
+  
+    /*entradas*/
+    .tituloentradas {
+      margin: 20px auto 0 auto; /* centrado horizontal con espacio arriba */
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      width: fit-content;
+    }
+  
+    
+    
+    .tituloUbicacion{
+      font-size: 30px;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      margin-top: 1rem;
+  
+    }
+    .descripcionUbicacion{
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-family: 'Georgia', sans-serif;
+      font-weight: bold;
+      text-align: center; 
+      padding-bottom: 10px;
+  
+    }
+    
+    
+    /*boton para comunicarse */
+    .botonWhats {
+    position: fixed;
+    bottom: 50px; /* O el valor que prefieras */
+    right: 10px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 9999;    /* Asegura que esté encima de otros elementos */
+    }
+    /*fin del boton*/
+    
+    /*parte final de la pagina*/
+    .ultimoo{
+      
+      background-color: black;
+      padding-top: 1px;
+      padding-bottom: 10px;
+      
+    }
+    .logoDerecho{
+      color: white;
+      margin-top: 10px;
+      margin-left: 3rem;
+      width: fit-content;
+  
+    }
+    .derechos{
+      color: white;
+      margin-left: 5rem;
+      margin-top: -18px;
+    }
+    .titulo2{
+      color: white;
+      width: fit-content;
+      margin-left: 45rem;
+      margin-top: -18px;
+    }
+    a {
+      text-decoration: none;
+    }
+    
+  }  
+  
+  
